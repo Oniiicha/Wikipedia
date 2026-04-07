@@ -1,7 +1,7 @@
 window.addEventListener("load", () => {
+    document.body.classList.remove("fade-out");
     document.body.classList.add("loaded");
 });
-
 const artists = {
     pepel: {
         name: "Pepel Nahudi",
@@ -269,3 +269,18 @@ function loadArtist() {
 }
 
 loadArtist();
+
+// фикс для возврата через кнопку браузера
+window.addEventListener("pageshow", (event) => {
+    // если страница загружена из кеша (назад/вперёд)
+    if (event.persisted) {
+        document.body.classList.remove("fade-out");
+        document.body.classList.add("loaded");
+    }
+});
+
+document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "visible") {
+        document.body.classList.remove("fade-out");
+    }
+});

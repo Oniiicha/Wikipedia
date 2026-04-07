@@ -1,1 +1,1 @@
-# [Wikipedia](https://oniiicha.github.io/Wikipedia/)
+# https://oniiicha.github.io/Wikipedia/

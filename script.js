@@ -1,3 +1,7 @@
+window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+});
+
 const artists = {
     pepel: {
         name: "Pepel Nahudi",
@@ -19,29 +23,29 @@ const artists = {
         «живет» его музыкой, а не просто слушает её фоном.
         `,
         listen: "https://music.yandex.ru/artist/8262943",
-        Tg: "https://t.me/pepelnahudiAB",
+        tg: "https://t.me/pepelnahudiAB",
         yt: "https://www.youtube.com/@pepelnahudi4120",
 
         albums: [
             {
                 title: "GARGONNA MUSIC",
                 year: "2025",
-                cover: "https://i.scdn.co/image/ab67616d0000b273c1"
+                cover: "https://avatars.yandex.net/get-music-content/15142616/ae3c788a.a.37119968-1/m1000x1000"
             },
             {
                 title: "AUTUMN BLUES",
                 year: "2024",
-                cover: "https://i.scdn.co/image/ab67616d0000b273c2"
+                cover: "https://avatars.yandex.net/get-music-content/13529784/668ca210.a.33625674-1/m1000x1000"
             },
             {
                 title: "PSYCHEDELIC LOVE",
                 year: "2024",
-                cover: "https://i.scdn.co/image/ab67616d0000b273c3"
+                cover: "https://avatars.yandex.net/get-music-content/14662984/d001713c.a.30437892-2/m1000x1000"
             },
             {
                 title: "KINGDOM MADE",
                 year: "2023",
-                cover: "https://i.scdn.co/image/ab67616d0000b273c4"
+                cover: "https://avatars.yandex.net/get-music-content/10930741/2878a22d.a.27646090-1/m1000x1000"
             }
         ]
     },
@@ -64,29 +68,29 @@ const artists = {
         Он активно сотрудничает с другими артистами и формирует вокруг себя
         целую экосистему новой школы.`,
         listen: "https://music.yandex.ru/artist/5880813",
-        Tg: "https://t.me/budaog",
+        tg: "https://t.me/budaog",
         yt: "https://www.youtube.com/@OGBUDA",
 
         albums: [
             {
                 title: "Скучаю, Но Ещё Работаю",
                 year: "2025",
-                cover: "https://i.scdn.co/image/ab67616d0000b273d1"
+                cover: "https://avatars.yandex.net/get-music-content/16450533/92e8feec.a.39393015-1/m1000x1000"
             },
             {
                 title: "FREERIO 3",
                 year: "2024",
-                cover: "https://i.scdn.co/image/ab67616d0000b273d2"
+                cover: "https://avatars.yandex.net/get-music-content/9837520/b8f4f78c.a.33611143-3/m1000x1000"
             },
             {
                 title: "POX VAWË",
                 year: "2023",
-                cover: "https://i.scdn.co/image/ab67616d0000b273d3"
+                cover: "https://avatars.yandex.net/get-music-content/18132539/9b1a4fc4.a.28498420-2/m1000x1000"
             },
             {
                 title: "FREERIO",
                 year: "2021",
-                cover: "https://i.scdn.co/image/ab67616d0000b273d4"
+                cover: "https://avatars.yandex.net/get-music-content/18172800/0b49f797.a.15237030-10/m1000x1000"
             }
         ]
     },
@@ -110,20 +114,20 @@ const artists = {
         Благодаря этому у него формируется сильная аудитория,
         которая ценит именно эту «настоящесть».`,
         listen: "https://music.yandex.ru/artist/12666124",
-        Tg: "https://t.me/softestbed",
+        tg: "https://t.me/softestbed",
         yt: "https://www.youtube.com/@FRIENDLYTHUG52NGG.",
 
         albums: [
             {
-                title: "Cristoforo Colombo",
-                year: "2024",
-                cover: "https://i.scdn.co/image/ab67616d0000b273e1"
+                title: "Graf Monte-Cristo / Most Valuable Pirate",
+                year: "2025",
+                cover: "https://avatars.yandex.net/get-music-content/14247687/0f717849.a.36376575-2/m1000x1000"
             },
             {
-                title: "NGG Tape",
-                year: "2023",
-                cover: "https://i.scdn.co/image/ab67616d0000b273e2"
-            }
+                title: "Cristoforo Colombo",
+                year: "2024",
+                cover: "https://avatars.yandex.net/get-music-content/17655650/fe410a6f.a.28026987-4/m1000x1000"
+            },
         ]
     },
 
@@ -144,20 +148,20 @@ const artists = {
 
         Это делает его артистом «для настроения», а не просто для плейлиста.`,
         listen: "https://music.yandex.ru/artist/16509384",
-        Tg: "https://t.me/sektakai",
+        tg: "https://t.me/sektakai",
         yt: "https://www.youtube.com/@kaixxxngel",
 
         albums: [
             {
-                title: "Heavy Metal 2",
-                year: "2024",
-                cover: "https://i.scdn.co/image/ab67616d0000b273f1"
+                title: "damage",
+                year: "2025",
+                cover: "https://avatars.yandex.net/get-music-content/14854709/2ddaad79.a.38089920-1/m1000x1000"
             },
             {
-                title: "Angel Tape",
-                year: "2023",
-                cover: "https://i.scdn.co/image/ab67616d0000b273f2"
-            }
+                title: "Heavy Metal 2",
+                year: "2024",
+                cover: "https://avatars.yandex.net/get-music-content/14183125/b8b9eecf.a.33207179-1/m1000x1000"
+            },
         ]
     },
 
@@ -179,26 +183,40 @@ const artists = {
         Он представляет новое поколение артистов,
         которые не боятся ломать правила и делать что-то по-своему.`,
         listen: "https://music.yandex.ru/artist/8135481",
-        Tg: "https://t.me/toxisslime4",
+        tg: "https://t.me/toxisslime4",
         yt: "#https://www.youtube.com/@toxis8295",
 
         albums: [
             {
-                title: "ИЗНУТРИ",
-                year: "2024",
-                cover: "https://i.scdn.co/image/ab67616d0000b273g1"
+                title: "SLAANG",
+                year: "2025",
+                cover: "https://avatars.yandex.net/get-music-content/16406615/3ac16c91.a.39037296-2/m1000x1000"
             },
             {
-                title: "TOXIS WORLD",
-                year: "2023",
-                cover: "https://i.scdn.co/image/ab67616d0000b273g2"
-            }
+                title: "ИЗНУТРИ",
+                year: "2024",
+                cover: "https://avatars.yandex.net/get-music-content/13529784/a0ea4270.a.33696836-1/m1000x1000"
+            },
         ]
     }
 };
 
 function goTo(id) {
-    window.location.href = `artist.html?id=${id}`;
+    document.body.classList.add("fade-out");
+
+    setTimeout(() => {
+        window.location.href = `artist.html?id=${id}`;
+    }, 400);
+}
+
+function goBack(e) {
+    e.preventDefault();
+
+    document.body.classList.add("fade-out");
+
+    setTimeout(() => {
+        window.location.href = "index.html";
+    }, 400);
 }
 
 function loadArtist() {
@@ -224,29 +242,29 @@ function loadArtist() {
         `;
     });
 
-    document.getElementById("artistPage").innerHTML =`
-        <h1>${a.name}</h1>
-        <img src="${a.img}">
-        <p>${a.text}</p>
+    document.getElementById("artistPage").innerHTML = `
+        <div class="fade-in">
+            <h1>${a.name}</h1>
+            <img src="${a.img}">
+            <p>${a.text}</p>
 
-        <h2>Дискография</h2>
-        <div class="albums">${albumsHTML}</div>
+            <h2>Дискография</h2>
+            <div class="albums">${albumsHTML}</div>
 
-        <div class="buttons">
+            <div class="buttons">
+                <button class="btn listen" onclick="window.location.href='${a.listen}'">
+                    <i class="fa-solid fa-headphones"></i> СЛУШАТЬ
+                </button>
 
-        <button class="btn listen" onclick="window.location.href='${a.listen}'">
-            <i class="fa-solid fa-headphones"></i> СЛУШАТЬ
-        </button>
+                <button class="btn tg" onclick="window.location.href='${a.tg}'">
+                    <i class="fa-brands fa-telegram"></i> Telegram
+                </button>
 
-        <button class="btn social" onclick="window.location.href='${a.Tg}'">
-            <i class="fa-brands fa-telegram"></i> Telegram
-        </button>
-
-        <button class="btn social" onclick="window.location.href='${a.yt}'">
-            <i class="fa-brands fa-youtube"></i> YouTube
-        </button>
-
-    </div>
+                <button class="btn yt" onclick="window.location.href='${a.yt}'">
+                    <i class="fa-brands fa-youtube"></i> YouTube
+                </button>
+            </div>
+        </div>
     `;
 }
 

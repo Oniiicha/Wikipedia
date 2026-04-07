@@ -1,88 +1,145 @@
+/* ОСНОВА */
 body {
     margin: 0;
-    font-family: Arial;
-    background: #0d0d0d;
+    font-family: 'Arial', sans-serif;
+    background: radial-gradient(circle at top, #111, #050505);
     color: white;
+    opacity: 0;
+    transition: opacity 0.5s ease;
 }
 
+body.loaded {
+    opacity: 1;
+}
+
+body.fade-out {
+    opacity: 0;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.6s ease forwards;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* HEADER */
 header {
     text-align: center;
-    padding: 25px;
-    font-size: 30px;
-    background: black;
+    padding: 30px;
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #222;
 }
 
+/* GRID */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-    padding: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+    padding: 30px;
 }
 
+/* CARD */
 .card {
+    position: relative;
     cursor: pointer;
-    border-radius: 15px;
+    border-radius: 18px;
     overflow: hidden;
-    transition: 0.3s;
+    transition: 0.4s;
+    background: #111;
 }
 
 .card img {
     width: 100%;
-    height: 260px;
+    height: 300px;
     object-fit: cover;
+    transition: 0.4s;
+    filter: brightness(0.75);
 }
 
+/* ГЛАВНЫЙ ЭФФЕКТ */
 .card:hover {
-    transform: scale(1.05);
+    transform: translateY(-10px) scale(1.02);
 }
 
-.card-title {
-    padding: 10px;
-    font-weight: bold;
+.card:hover img {
+    transform: scale(1.1);
+    filter: brightness(1);
 }
+
+/* ГРАДИЕНТ СНИЗУ */
+.card::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+}
+
+/* ИМЯ */
+.card-title {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    font-weight: bold;
+    font-size: 20px;
+    z-index: 2;
+}
+
+/* ==== СТРАНИЦА АРТИСТА ==== */
 
 .artist-page {
-    padding: 30px;
-    max-width: 800px;
-    margin: auto;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 25px;
+    background: rgba(15,15,15,0.8);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
 }
 
+/* УМЕНЬШИЛИ ФОТКУ */
 .artist-page img {
-    width: 100%;
+    width: 220px;
     border-radius: 15px;
-}
-
-.buttons {
-    margin-top: 20px;
-}
-
-.btn {
-    padding: 12px 15px;
-    margin-right: 10px;
-    border: none;
-    cursor: pointer;
-    border-radius: 8px;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-weight: bold;
-}
-
-.listen {
-    background: #ff0055;
-    color: white;
-}
-
-.back {
     display: block;
-    padding: 15px;
+    margin-bottom: 20px;
 }
+
+/* ТЕКСТ */
+.artist-page p {
+    line-height: 1.6;
+    color: #ccc;
+}
+
+/* ЗАГОЛОВКИ */
+.artist-page h1 {
+    margin-top: 0;
+}
+
+.artist-page h2 {
+    margin-top: 30px;
+    color: #ff0055;
+}
+
+/* ==== ДИСКОГРАФИЯ ==== */
 
 .albums {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .album {
@@ -90,26 +147,93 @@ header {
     align-items: center;
     gap: 15px;
     background: #111;
-    padding: 10px;
-    border-radius: 10px;
-    transition: 0.2s;
+    padding: 12px;
+    border-radius: 12px;
+    transition: 0.3s;
+    border: 1px solid #222;
 }
 
 .album:hover {
     transform: scale(1.03);
+    border-color: #ff0055;
 }
 
 .album img {
-    width: 70px;
-    height: 70px;
+    width: 65px;
+    height: 65px;
     border-radius: 8px;
     object-fit: cover;
 }
 
-.social {
-    background: #222;
+/* ==== КНОПКИ ==== */
+
+.buttons {
+    margin-top: 25px;
 }
 
+.btn {
+    padding: 12px 16px;
+    margin-right: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+    transition: 0.25s;
+}
+
+/* СЛУШАТЬ */
+.listen {
+    background: linear-gradient(45deg, #ff0055, #ff3366);
+    color: white;
+}
+
+.listen:hover {
+    transform: scale(1.05);
+}
+
+/* TELEGRAM */
+.tg {
+    background: #0088cc;
+    color: white;
+}
+
+.tg:hover {
+    background: #00aaff;
+}
+
+/* YOUTUBE */
+.yt {
+    background: #ff0000;
+    color: white;
+}
+
+.yt:hover {
+    background: #ff3333;
+}
+
+/* ==== КНОПКА НАЗАД ==== */
+
+.back {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px 15px;
+    background: #111;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    border: 1px solid #333;
+    transition: 0.3s;
+}
+
+.back:hover {
+    background: #ff0055;
+    border-color: #ff0055;
+}
+
+/* ИКОНКИ */
 .btn i {
     font-size: 16px;
 }

@@ -151,6 +151,7 @@ header {
     border-radius: 12px;
     transition: 0.3s;
     border: 1px solid #222;
+    flex-wrap: wrap;
 }
 
 .album:hover {
@@ -163,6 +164,16 @@ header {
     height: 65px;
     border-radius: 8px;
     object-fit: cover;
+    flex-shrink: 0;
+}
+
+.album div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #ccc;
+    font-size: 14px;
+    min-width: 0;
 }
 
 /* ==== КНОПКИ ==== */
@@ -295,12 +306,19 @@ header {
 
     /* ДИСКОГРАФИЯ */
     .album {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
         gap: 10px;
     }
 
+    .album div {
+        font-size: 13px;
+    }
+
     .album img {
-        width: 55px;
-        height: 55px;
+        width: 100px;
+        height: 100px;
     }
 
     /* КНОПКА НАЗАД */
@@ -312,6 +330,14 @@ header {
 
 /* === ОЧЕНЬ МАЛЕНЬКИЕ ЭКРАНЫ === */
 @media (max-width: 400px) {
+    .album img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .album div {
+        font-size: 12px;
+    }
 
     .grid {
         grid-template-columns: 1fr;

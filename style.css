@@ -237,3 +237,91 @@ header {
 .btn i {
     font-size: 16px;
 }
+
+/* === МОБИЛЬНАЯ ВЕРСИЯ === */
+@media (max-width: 768px) {
+
+    header {
+        font-size: 22px;
+        padding: 20px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .card img {
+        height: 200px;
+    }
+
+    .card-title {
+        font-size: 16px;
+    }
+
+    /* СТРАНИЦА АРТИСТА */
+    .artist-page {
+        margin: 20px 10px;
+        padding: 20px;
+    }
+
+    /* ФОТКА ПО ЦЕНТРУ */
+    .artist-page img {
+        width: 140px;
+        margin: 0 auto 15px auto;
+    }
+
+    .artist-page h1 {
+        text-align: center;
+        font-size: 24px;
+    }
+
+    .artist-page p {
+        font-size: 14px;
+    }
+
+    /* КНОПКИ В СТОЛБИК */
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* ДИСКОГРАФИЯ */
+    .album {
+        gap: 10px;
+    }
+
+    .album img {
+        width: 55px;
+        height: 55px;
+    }
+
+    /* КНОПКА НАЗАД */
+    .back {
+        margin: 10px;
+        font-size: 14px;
+    }
+}
+
+/* === ОЧЕНЬ МАЛЕНЬКИЕ ЭКРАНЫ === */
+@media (max-width: 400px) {
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card img {
+        height: 220px;
+    }
+}
+
+button, .card {
+    -webkit-tap-highlight-color: transparent;
+}
